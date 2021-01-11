@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Website</title>
     <style>
+        body {
+            counter-reset: section;
+        }
+        
         h1 {
             color: burlywood;
         }
@@ -25,24 +29,37 @@
         a:visited {
             color: chocolate;
         }
+        
+        .fu::after {
+            content: " Prezens";
+        }
+        
+        li::after {
+            counter-reset: ;
+        }
+        
+        p::before {
+            counter-increment: section;
+            content: "None " counter(section) ": ";
+        }
     </style>
 </head>
 
 <body>
-    <h1>Hello From Raufu</h1>
+    <h1 class="fu">Hello From Raufu</h1>
     <a href="https://instagram.com/iamraufu">Visit my Instagram</a>
     <h1>Bella Ciao</h1>
     <h1>Mon Kharap</h1>
     <input name="Name" type="text">
     <input name="Password" type="password">
     <ul>
-        <li>fufu</li>
-        <li>rufu</li>
-        <li>kufu</li>
-        <li>sifu</li>
-        <li>nufu</li>
-        <li>mofu</li>
-        <li>jofu</li>
+        <p>fufu</p>
+        <p>rufu</p>
+        <p>kufu</p>
+        <p>sifu</p>
+        <p>nufu</p>
+        <p>mofu</p>
+        <p>jofu</p>
     </ul>
 </body>
 
